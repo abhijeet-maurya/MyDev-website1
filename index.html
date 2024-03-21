@@ -9,9 +9,17 @@
     <script src="./script.js"></script>
     <link rel="shortcut icon" href="./me.jpg" type="image/x-icon">
     <title>CodeWithAbhi</title>
-
 </head>
 <body>
+    <div class="blurlight" style="position: absolute;"></div>
+    <script>
+        let cur = document.querySelector('.blurlight');
+        document.addEventListener("mousemove", function(dets) {
+            cur.style.opacity=1;
+            cur.style.top = dets.clientY + "px";
+            cur.style.left = dets.clientX + "px";
+        });
+    </script>
     <header class="header">
         <a href="#">
             <div class="logo">
@@ -25,7 +33,7 @@
                 <li class="pagelink"><a href="#">home</a></li>
                 <li class="pagelink"><a href="#Aboutpage">about</a></li>
                 <li class="pagelink"><a href="#Projectpage">project</a></li>
-                <li class="pagelink"><a href="#contact">contact</a></li>
+                <li class="pagelink"><a href="#Contectpage">contact</a></li>
             </ul>
             <div id="bg4navul"></div>
             <div class="burgermenu" id="burgermenu" onclick="showmenu()"><i class="fa-solid fa-bars"></i></div>
@@ -45,7 +53,7 @@
                 <div class="text">
                     <p>A Result-Oriented Web Developer building and managing Websites and Web Applications that leads to the success of the overall product...</p>
                 </div>
-                <button class="projectbtn">PROJECT</button>
+                <button class="projectbtn" onclick="location.href='#Projectpage'">PROJECT</button>
             </div>
         </div>
         
@@ -104,15 +112,35 @@
     </section>
 
     <section id="Projectpage">
-        <div class="promaintext">&lt;PROJECT/&gt;</div>
+        <div class="promaintext">PROJECT</div>
         <div class="proele_container">
-            <div class="protype1">
+            <div class="protype">
+                <img src="./me.jpg" alt="">
+                <div class="proinfo">
+                    <p>Lorem ipsum dolor sit amet. consectetur adipisicing elit. Debitis vero ipsum, minus quis voluptas odit id iure beatae hic veritatis totam, illo impedit eos. Culpa labore dolorum saepe cumque hic? </p>
+                    <button>View Project</button>
+                </div>
             </div>
-            <div class="protype2">
+            <div class="protype">
+                <img src="./me.jpg" alt="">
+                <div class="proinfo">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis vero ipsum, minus quis voluptas odit id iure beatae hic veritatis totam, illo impedit eos. Culpa labore dolorum saepe cumque hic? </p>
+                    <button>View Project</button>
+                </div>
             </div>
-            <div class="protype3">
+            <div class="protype">
+                <img src="./me.jpg" alt="">
+                <div class="proinfo">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis vero ipsum, minus quis voluptas odit id iure beatae hic veritatis totam, illo impedit eos. Culpa labore dolorum saepe cumque hic? </p>
+                    <button>View Project</button>
+                </div>
             </div>
-            <div class="protype4">
+            <div class="protype">
+                <img src="./me.jpg" alt="">
+                <div class="proinfo">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis vero ipsum, minus quis voluptas odit id iure beatae hic veritatis totam, illo impedit eos. Culpa labore dolorum saepe cumque hic? </p>
+                    <button>View Project</button>
+                </div>
             </div>
         </div>
     </section>
@@ -126,7 +154,7 @@
                 <input type="text" name="uname" id="" placeholder="Enter your Name">
                 <p>Email ID</p>
                 <input type="email" name="email" id="" placeholder="Enter your Email ID">
-                <p>Massage</p>
+                <p>Message</p>
                 <textarea name="Massage" id="" cols="30" rows="10" placeholder="Enter your Messages..."></textarea>
                 <button name="submit">Submit</button>
             </form>
