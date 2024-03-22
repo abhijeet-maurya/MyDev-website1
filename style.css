@@ -424,6 +424,7 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x:hidden ;
 }
 .promaintext{
     font-size: clamp(2rem, 3.5vw, 4rem);
