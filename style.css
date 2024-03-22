@@ -208,24 +208,23 @@ section{
     padding: 5px;
 }
 .socialicons a:hover>i{
-    background-color: #3333338c;
     border-radius: 5px;
 }
-.socialicons .icon1:hover>i{
+.icon1:hover>i{
     background-color:#0A66C2;
     color: #ffffff;
 }
-.socialicons .icon2:hover>i{
+.icon2:hover>i{
     background-color:#000000;
     color: #ffffff;
     scale: 1.85;
 }
-.socialicons .icon3:hover>i{
+.icon3:hover>i{
     background-color:#000000;
     color: #ffffff;
     scale: 1.85;
 }
-.socialicons .icon4:hover>i{
+.icon4:hover>i{
     background-image:linear-gradient(30deg,#feda75, #fa7e1e,#d62976,#962fbf,#4f5bd5);
     color: #ffffff;
     scale: 1.85;
@@ -570,8 +569,6 @@ section{
         rotate: 180deg;
     }
 }
-
-
 #Contectpage{
     width: 100%;
     min-height: 80vh;
@@ -638,6 +635,7 @@ section{
     background: linear-gradient(145deg, #5e44b9, #6f51db);
     box-shadow: inset 6px 6px 12px #3b2b75,
                 inset -6px -6px 12px #956dff;
+    margin-bottom: 1vw;
 }
 #Contectpage input,textarea{
     background-color:#b6b3b392;
@@ -665,9 +663,44 @@ textarea{
 
 footer{
     width: 100%;
-    height: 20vw;
+    min-height: 20vw;
     background-color:#0b0d21;
+    color: #fafafa;
     /* border-radius: 90px 90px 0 0/50px 50px 0px 0%; */
     font-display:inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
 }
-
+#main_container{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border-bottom: 1px solid;
+    border-image:linear-gradient(to left,transparent 20%,#fafafa,transparent 80%);
+    border-image-slice: 2;
+    padding: 3vw;
+}
+#for_container{
+    width: 60%;
+    color: #fafafa;
+}
+#fol_main_text,#for_main_text{
+    font-size: clamp(1.5rem, 2vw, 3rem);
+    -webkit-text-stroke: 1px #fafafa;
+    color: #fafafa;
+    margin-bottom:3vh;
+    letter-spacing:min(0.3vh,3px);
+}
+#fol_container a i{
+    scale: 1.55;
+    border-radius: 8px;
+    padding: 8px;
+    margin-left:0.5vw;
+    color: #fafafa;
+}
+#ending,#ending a{
+    color: #fafafa;
+}
