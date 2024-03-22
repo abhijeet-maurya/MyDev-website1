@@ -418,7 +418,7 @@ section{
     color:#000000;
 }
 #Projectpage{
-    width: 100%;
+    width: 100vw;
     min-height: 100vh;
     background-color:#ff4500;
     display: flex;
@@ -453,7 +453,7 @@ section{
     justify-content: center;
     align-items: center;
     border: 1px solid #eb3f01;
-    margin: 3.5vw 5vw;
+    margin: 2.5vw 4vw;
     border-radius: 2vw;
     box-shadow:20px 20px 30px #802300,
                 -20px -20px 30px #ff6800;
