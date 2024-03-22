@@ -124,19 +124,29 @@ header .navbar ul{
     margin-top:30px;
 }
 .firstslide .maintext{
-    width: 100%;
+    position:absolute;
+    left: 10%;
+    width:68%;
     height: auto;
     font-size: clamp(2rem, 3.6vw, 4rem);
+    overflow: hidden;
+    border-right:5px solid orangered ;
+    animation:writingtext 4s infinite steps(25) 1s;
+}
+.firstslide .maintext p{
+    width: 85vw;
+    position: relative;
 }
 @keyframes writingtext {
     0%{
-
+        width: 16%;
     }
     100%{
-
+        width:70%;
     }
 }
 .firstslide .subtext{
+    margin-top: 7%;
     font-size: clamp(1.5rem, 2.2vw, 3rem);
     font-family:Viner Hand;
     font-style: italic;
@@ -392,7 +402,8 @@ section{
     border-radius:40px;
     margin:1.1vw;
     padding: 30px 2vw;
-    background: #684ccd;
+    /* background: #684ccd; */
+    backdrop-filter: blur(3px);
     box-shadow: inset 17px 17px 37px #2a1e52,
                 inset -17px -17px 37px #a67aff;
     border-left:0.8vw solid ;
@@ -467,7 +478,7 @@ section{
     margin: 2vw 6vw 2vw 2vw;
     /* border: 1px solid black; */
     border-radius: 30px;
-    padding: 10px;
+    padding: 6px;
     box-shadow: 20px 20px 30px #802300,
                 -20px -20px 30px #ff6800 ;
 }

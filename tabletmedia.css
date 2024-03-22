@@ -42,6 +42,16 @@ nav ul{
     box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.30),0px 0px 2.5px 3px rgba(0, 0, 0, 0.30);
     border-radius: 10px;
 }
+.firstslide .maintext{
+    position: static;
+    width: 100%;
+    border: none;
+    overflow: visible;
+    animation: none;
+}
+.firstslide .subtext{
+    margin-top: 0px;
+}
 .socialicons{ 
     position: absolute;
     top: 180px;
@@ -57,6 +67,10 @@ nav ul{
                          'right';
     grid-template-rows: 0.3fr 1.3fr 1.5fr;
     min-height: 100vh;
+}
+.proele_container {
+    margin: 0;
+    box-shadow: none;
 }
 .protype{
     display: flex;
@@ -80,6 +94,8 @@ nav ul{
 .proinfo button{
     margin:0.5vw 0 5vw 18vw;
 }
-
+#Contectpage input,#Contectpage button,textarea{
+    width: 70%;
+}
 
 }
