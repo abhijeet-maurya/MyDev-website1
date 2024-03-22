@@ -65,7 +65,7 @@ nav ul{
     grid-template-areas: 'main'
                          'left'
                          'right';
-    grid-template-rows: 0.3fr 1.3fr 1.5fr;
+    grid-template-rows: 0.1fr 1.3fr 1.3fr;
     min-height: 100vh;
 }
 .proele_container {

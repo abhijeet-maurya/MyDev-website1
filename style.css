@@ -264,8 +264,33 @@ section{
     place-items: center;
     padding-top: 5px;
     background-image: linear-gradient(-240deg,#4926c2 30%,#977ce7 90%);
+    overflow: hidden;
 }
-.chatbox .chatlogo i{
+.chatlogo #pen_icon{
+    display: none;
+}
+.chatlogo:hover>#pen_icon{
+    display: block;
+    color: #376fdd;
+    background-color: #fafafa;
+    scale: 2;
+    padding: 12px;
+    border-radius: 50%;
+    transition:cubic-bezier(1, 0, 0, 1);
+    animation: pen_intro 0.5s;
+}
+@keyframes pen_intro {
+    0%{
+        scale:0;
+    }
+    100%{
+        scale: 2.4;
+    }
+}
+.chatlogo:hover>#Massage_icon{
+    display: none;
+}
+.chatlogo #Massage_icon{
     color: #fafafa;
     scale: 1.5;
 }
@@ -282,7 +307,7 @@ section{
     display: grid;
     grid-template-areas: 'main main'
                          'left right';
-    grid-template-rows: 1fr 4.5fr;
+    grid-template-rows: 0.6fr 4.5fr;
     /* margin-bottom: 10%; */
     box-shadow: 0px 5px 40px 0px#341b8c inset,
     0px 5px 40px 0px #341b8c inset;
