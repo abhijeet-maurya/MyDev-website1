@@ -95,7 +95,13 @@ nav ul{
     margin:0.5vw 0 5vw 18vw;
 }
 #Contectpage input,#Contectpage button,textarea{
-    width: 70%;
+    width: 85%;
 }
-
+#Contectpage p{
+    position: relative;
+    left: -37%;
+}
+#Contectpage p:first-child{
+    left: -39%;
+}
 }
