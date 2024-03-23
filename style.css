@@ -704,6 +704,7 @@ footer{
     scale: 1.55;
     border-radius: 8px;
     padding: 8px;
+    margin-bottom: 1vw;
     margin-left:0.5vw;
     color: #fafafa;
 }

@@ -104,4 +104,20 @@ nav ul{
 #Contectpage p:first-child{
     left: -39%;
 }
+#main_container{
+    flex-direction: column;
+}
+#foo_right{
+    text-align: center;
+}
+#for_container{
+    text-align:justify;
+    width:80%;
+    margin-left:10%;
+    margin-bottom:0.5vw;
+}
+#ending{
+    width:80%;
+    text-align: center;
+}
 }
