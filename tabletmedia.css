@@ -69,24 +69,37 @@ nav ul{
     min-height: 100vh;
 }
 .proele_container {
-    margin: 0;
+    margin:0;
+    padding-top: 8vw;
     box-shadow: none;
 }
-.protype{
+.proele_container .protype {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 10vw;
+}
+.protype:nth-child(2n){
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
 }
 .proele_container div img {
-    height:250px;
-    min-height: 250px;
-    width: 250px;
-    min-width: 250px;
+    min-height: 230px;
+    min-width: 230px;
+}
+#phoneproject{
+    margin-top: 3vw;
+    min-height:280px;
+    min-width: 150px;
+    box-shadow: none;
+    border-radius: 20px;
 }
 .proinfo{
     width: 70%;
     margin-top: 3vw;
     padding:0;
+    border: none;
 }
 .proinfo p{
     width: 100%;
@@ -99,10 +112,10 @@ nav ul{
 }
 #Contectpage p{
     position: relative;
-    left: -37%;
+    left: -30%;
 }
 #Contectpage p:first-child{
-    left: -39%;
+    left: -35%;
 }
 #main_container{
     flex-direction: column;
