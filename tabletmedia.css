@@ -134,3 +134,12 @@ nav ul{
     text-align: center;
 }
 }
+
+
+
+
+@media only screen and (max-width: 824px) {
+    #down_arrow_box{
+        display: none;
+    }
+}

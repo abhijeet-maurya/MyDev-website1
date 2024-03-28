@@ -163,14 +163,39 @@ header .navbar ul{
     color: white;
     padding: 1.5% 5.5%;
     border-radius: 10px;
-    border: none;
+    border-width: 3px;
     font-size: clamp(1rem, 1.3vw, 2rem);
     font-weight: bold;
     background: linear-gradient(145deg, #5e44b9, #6f51db);
     box-shadow: inset 6px 6px 12px #3b2b75,
-                inset -6px -6px 12px #956dff;
+                inset -6px -6px 12px #3b2b75;
     z-index: 2;
 
+}
+#down_arrow{
+    scale: 1.1;
+    color: #333333bf;
+    animation: down_arrow_anime 2s infinite ease-in;
+}
+#down_arrow_box{
+    position: absolute;
+    bottom:1.8vw;
+    border: 2px solid #333333af;
+    padding: 1.8vh 1vh;
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(2px);
+}
+@keyframes down_arrow_anime {
+    0%{
+        transform: translateY(-30%);
+    }
+    30%{
+        transform: translateY(-0%);
+    }
+    100%{
+        transform: translateY(180%);
+    }
 }
 section{
     position: relative;
@@ -348,10 +373,12 @@ section{
 .aboutright p,.aboutleft p{
     padding: 25px 40px;
     font-size: clamp(1.2rem, 1.5vw, 2rem);
-    font-family: 'Courier New', Courier, monospace;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-family: system-ui,sans-serif,monospace;
     word-wrap:break-word;
-    color:rgb(55, 3, 50);
+    color:rgb(255, 255, 255);
     text-align: justify;
+    text-shadow: 0px 0px 2px rgb(0, 0, 0);
 }
 .aboutright ul li{
     list-style-type:disc;
@@ -492,7 +519,7 @@ section{
     box-shadow: 3px 3px 6px #802300,
                 -6px -6px 12px #ff7b00,
                 inset 6px 6px 12px #3b2b75,
-                inset -6px -6px 12px #956dff;
+                inset -6px -6px 12px #3b2b75;
 }
 #ballanime{
     height: 3.5vw;
@@ -607,8 +634,8 @@ color: orangered;
     border-radius: 10px;
     font-size: clamp(1rem, 1.5vw, 3rem);
     background: linear-gradient(145deg, #5e44b9, #6f51db);
-    box-shadow: inset 6px 6px 12px #3b2b75,
-                inset -6px -6px 12px #956dff;
+    box-shadow: inset 6px 6px 12px #372577,
+                inset -6px -6px 12px #372577;
     margin-bottom: 1vw;
 }
 #Contectpage input,textarea{
@@ -678,4 +705,92 @@ footer{
 }
 #ending,#ending a{
     color: #fafafa;
+}
+
+/* Aditional Animations */
+button{
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #5e44b9;
+}
+button> h4{
+    width: 100%;
+    padding-bottom:0;
+    position: relative;
+    z-index: 5;
+    color: #fafafa;
+    font-size: clamp(1rem, 1.3vw, 2rem);
+    font-weight: bold;
+}
+button::before{
+    content: " ";
+    height:120%;
+    width:110%;
+    background:linear-gradient(-270deg,#a540fe,#6441f4 30%,#0985eb 50%,transparent 90%);
+    position:absolute;
+    z-index:2;
+    top:50%;
+    left:32%;
+    border: 6px double #3333338c;
+
+    transform: translate(50%,-50%)  skew(40deg);
+    transition: transform 100ms, background 50ms;
+    box-shadow: -6px -6px 12px #3b2b75;
+    filter: blur(1px);
+}
+button::after{
+    content: " ";
+    height:120%;
+    width:110%;
+    filter: blur(1px);
+    box-shadow: 6px 6px 12px #3b2b75;
+    border: 6px double #3333338c;
+    background:linear-gradient( 270deg,#a540fe,#6441f4 30%,#0985eb 50%,transparent 90%);
+    position:absolute;
+    z-index:2;
+    top:50%;
+    left:-45%;
+    transform: translate(-50%,-50%) skew(40deg);
+    transition: transform 100ms, background 50ms;
+}
+button:hover::after{
+    animation: button_LtoR 0.8s;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    box-shadow: inset 6px 6px 12px #3b2b75;
+    filter: blur(0.2px);
+}
+button:hover::before{
+    animation: button_RtoL 0.8s;
+    top:50%;
+    left:-60%;
+    transform: translate(50%,-50%);
+    box-shadow: inset 16px 16px 22px #3b2b75;
+    filter: blur(0.2px);
+
+}
+@keyframes button_RtoL {
+    0%{
+        top:50%;
+        left:30%;
+        transform: translate(50%,-50%) skew(40deg);
+    }
+    100%{
+        top:50%;
+        left:-60%;
+        transform: translate(50%,-50%) skew(40deg);
+    }
+}
+@keyframes button_LtoR {
+    0%{
+        top:50%;
+        left:-40%;
+        transform: translate(-50%,-50%) skew(40deg);
+    }
+    100%{
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%) skew(40deg);
+    }
 }
