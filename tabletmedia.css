@@ -133,10 +133,14 @@ nav ul{
     width:80%;
     text-align: center;
 }
+.proinfo h2{
+    margin: 5vw 0;
 }
 
 
 
+
+}
 
 @media only screen and (max-width: 824px) {
     #down_arrow_box{

@@ -7,7 +7,79 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./tabletmedia.css">
     <link rel="shortcut icon" href="./me.jpg" type="image/x-icon">
-    <script src="./script.js"></script>
+    <style>
+      #All_details{
+        width: 100vw;
+        background-color:#ececec;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+      }
+      #All_details .content_box{
+        width:90%;
+        min-height: 80vh;
+        background-color: #fafafa;
+        height:100%;
+        padding: 3% 5%;
+      }
+      #cantainer_img{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      #cantainer_img h1{
+        font-size:50px;
+        padding: 0px 12px 3px 12px;
+        /* background: #000; */
+        border-radius: 100px;
+        line-height: 50px;
+        transition: 0.3s ease-in;
+      }
+      #cantainer_img h1:hover{
+        background: #656565;
+        color: #fafafa;
+      }
+      .image_scoller{
+        height: 35vw;
+        width: 16vw;
+        min-height:320px;
+        min-width: 165px;
+        overflow-x: hidden;
+        scroll-snap-type: mandatoryX;
+      }
+      .image_scoller div{
+        display: flex;
+        gap: 40px;
+        padding: 10px;
+        /* transform: translateX(-330%); */
+      }
+      
+      button{
+        background-color: #674bcb;
+      }
+      .content_box h1{
+        color:#674bcb;
+        font-size: clamp(1.5rem, 2.2vw, 3.5rem);
+      }
+      .content_box h3::before{
+        content: "• ";
+      }
+      .content_box h3{
+        font-size: clamp(1.1rem, 1.5vw, 2rem);
+      }
+      .content_box p{
+        margin: 1vw 0 2vw 0;
+        /* text-align: justify; */
+        text-wrap:wrap;
+        font-size: clamp(0.9rem, 1.3vw, 2rem);
+      }
+      #phoneproject{
+        border-radius:2vw;
+        rotate: 0deg;
+        margin: 0;
+      }
+    </style>
   </head>
   <body>
     <header class="header">
@@ -31,10 +103,88 @@
         </div>
       </nav>
     </header>
+    <br>
+    <br>
 
+    <section class="main">
+      <div class="outerbox">
+          <div class="firstslide">
+              <span id="down_arrow_box"><i class="fa-solid fa-arrow-down-long" id="down_arrow"></i></span>
+              <div class="maintext" style="animation: none; border: none;" >
+                  <p>Android Phone</p>
+              </div>
+              <div class="subtext">
+                  <p>(Semi-Functional Prototype)</p>
+              </div>
+              <div class="text">
+                <p> This project is an exploration of how we can replicate the functionalities and aesthetics of an Android phone interface within a web environment.</p>
+              </div>
+              <button class="projectbtn" onclick="location.href='#'"><h4>Source Code</h4></button>
+          </div>
+      </div>
 
+    </section> 
 
+    <section id="All_details">
+      <div class="content_box">
+        <div id="cantainer_img">
+          <h1 onclick="left()" id="image_Left_BTN"><</h1>
+          <div class="image_scoller">
+            <div class="img_slider">
+              <img src="./phoneimg.png" id="phoneproject" alt="CSS Phone 1">
+              <img src="./19449741.jpg" id="phoneproject" alt="CSS Phone 2">
+              <img src="./379.jpg" id="phoneproject" alt="CSS Phone 3">
+              <img src="./classic clock.png" id="phoneproject" alt="CSS Phone 4">
+            </div>
+          </div>
+          <h1 onclick="right()"  id="image_right_BTN">></h1>
+        </div>
+        <h1>Overview</h1>
+        <p>Our project stands as an ambitious exploration, delving deep into the realms of web technologies to construct a semi-functional  prototype of an Android phone. Through the intricate fusion of HTML, CSS, and JavaScript DOM, we endeavor to craft a virtual environment that not only emulates the appearance but also encapsulates the essence of interacting with a real Android device, all within the confines of a web browser.</p>
+        
+        <h3>Purpose:</h3>
+        <p>At the heart of our project lies a fundamental objective: to showcase the boundless potential of web-based emulation in recreating the user experience of an Android phone. By meticulously employing HTML for structural integrity, CSS for aesthetic finesse, and JavaScript DOM for dynamic interaction, we aspire to furnish users with a prototype that transcends mere simulation, offering an immersive journey akin to navigating through a physical Android device.</p>
+        <h3>Features:</h3>
+        <p>Our prototype is replete with a plethora of features, meticulously crafted to replicate the functionalities of an actual Android phone. From the iconic grid layout of app icons adorning the home screen to the expansive app drawer housing an array of installed applications, users are seamlessly immersed in a familiar interface. Moreover, the incorporation of a notifications panel, settings menu, and responsive design further elevates the prototype's realism, fostering an intuitive and engaging user experience.</p>
+        
+        <h3>Technology Stack:</h3>
+        <p>A robust technological framework underpins our prototype, leveraging the symbiotic capabilities of HTML, CSS, and JavaScript DOM. HTML serves as the backbone, meticulously structuring the prototype's content, while CSS meticulously crafts the visual aesthetics, mirroring the design principles of an Android device. JavaScript DOM acts as the dynamic force, orchestrating seamless interaction, enabling features such as app launching, notification management, and menu navigation.</p>
+        
+        <h3>Future Enhancements:</h3>
+        <p>While our prototype stands as a testament to ingenuity and innovation, we envision a horizon brimming with possibilities for further advancement. Future iterations could herald the integration of additional Android features, ranging from dynamic widgets to advanced multi-tasking capabilities, pushing the boundaries of emulation. Furthermore, enhancements in visual fidelity, animation effects, and backend functionality could propel the prototype towards a realm of heightened realism, offering users an unparalleled virtual experience akin to interfacing with an authentic Android device.</p>
+        
+        <h3>Conclusion:</h3>
+        <p>In conclusion, our semi-functional prototype of an Android phone marks a significant milestone in the evolution of web-based application development and emulation. By encapsulating the essence of a real Android device within a virtual environment, we aspire to inspire curiosity, innovation, and exploration in the realm of web technologies, igniting a spark of creativity that transcends the boundaries of digital emulation.</p>
+        <h1>Tools Used</h1>
+        <h1>See Live</h1>
+        <button><h4>Live Link</h4></button>
+        <button><h4>Go Back</h4></button>
+        <a href="" id="go_back_button"><h4>Go Back</h4></a>
+      </div>
+    </section>
 
+    <footer>
+      <div id="main_container">
+          <div id="foo_right">
+              <div id="for_main_text">ABHIJEET MAURYA</div>
+              <div id="for_container">A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product</div>
+          </div>
+          <div id="foo_left">
+              <div id="fol_main_text">SOCIAL</div>
+              <div id="fol_container">
+                  <a href="#" class="icon1"><i class="fa-brands fa-linkedin"></i></a>
+                  <a href="#" class="icon2"><i class="fa-brands fa-x-twitter"></i></a>
+                  <a href="#" class="icon3"><i class="fa-brands fa-github"></i></a>
+                  <a href="#" class="icon4"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+          </div>
+      </div>
+      <div id="ending">© Copyright 2024 . Made by <a href="">ABHIJEET MAURYA</a></div>
+  </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js"></script>
     <script src="//code.tidio.co/jgphhnpgupayzkrgvy5ta4tat7fkjd2x.js" async></script>
+    <script src="./project_script.js"></script>
   </body>
 </html>

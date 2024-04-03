@@ -489,10 +489,11 @@ section{
     border: none;
     box-shadow: none;
 }
-.proinfo::first-line{
+.proinfo h2{
+    margin: 2vw 0;
     color: white;
     font-size: clamp(1rem, 1.7vw, 2rem);
-    line-height: 5;
+    /* line-height: 10px; */
 }
 
 .proinfo{

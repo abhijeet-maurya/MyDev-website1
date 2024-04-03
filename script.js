@@ -17,3 +17,11 @@ function showmenu(){
     }
 }
 
+// document.querySelector('.image_Left_BTN').addEventListener('click',function(){
+//      let BtnCount= 0;
+//      let a
+// });
+// document.querySelector('.image_Left_BTN').addEventListener('click',function(){
+//     let BtnCount= 0;
+//     let a=
+// });
