@@ -14,6 +14,7 @@ mm.add("(min-width:1024px)", () => {
         scrub:2
     }
 });
+
   });
 // function scolltop(){
 //     document.querySelector
