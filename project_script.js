@@ -4,7 +4,7 @@ gsap.from('.img_slider', {
     scrollTrigger:{
         trigger:'image_scoller',
         scroller:"body",
-        markers:true,
+        // markers:true,
         start:'Top -50%',
         end:'Top -100%',
         startTrigger:"",
