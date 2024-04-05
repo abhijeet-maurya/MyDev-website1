@@ -1,18 +1,21 @@
+gsap.from('.img_slider', {
+    // duration:5,
+    transform:"translateX(-440%)",
+    scrollTrigger:{
+        trigger:'image_scoller',
+        scroller:"body",
+        markers:true,
+        start:'Top -50%',
+        end:'Top -100%',
+        startTrigger:"",
+        pin:true,
+        scrub:2
+    }
+});
 
-// gsap.from('.img_slider', {
-//     duration:16,
-//     x: "-440%",
-//     scrubber:3,
-//     yoyo:true,
-//     repeat:-1,
-//     scrollTrigger:{
-//         trigger:'#cantainer_img',
-//         // markers:true,
-//         start:'Top 60%',
-//         end:'Top 10%',
-//         pin:true,
-//     }
-// });
+// function scolltop(){
+//     document.querySelector
+// }
 
 let a=0;
 let LBtnCount= 0;
