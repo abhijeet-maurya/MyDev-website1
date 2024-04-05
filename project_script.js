@@ -1,4 +1,6 @@
-gsap.from('.img_slider', {
+let mm = gsap.matchMedia();
+mm.add("(min-width:1024px)", () => {
+    gsap.from('.img_slider', {
     // duration:5,
     transform:"translateX(-440%)",
     scrollTrigger:{
@@ -12,7 +14,7 @@ gsap.from('.img_slider', {
         scrub:2
     }
 });
-
+  });
 // function scolltop(){
 //     document.querySelector
 // }
