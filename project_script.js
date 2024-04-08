@@ -1,5 +1,5 @@
 const swiper = new Swiper('.swiper', {
-    spaceBetween: 200,
+
     // effect: "cards",
     lazy: true,
     loop: true,
@@ -7,7 +7,7 @@ const swiper = new Swiper('.swiper', {
         enabled: true,
     },
     autoplay: {
-        delay: 2500,
+        delay: 1500,
         disableOnInteraction: false,
     },
     effect: "coverflow",
@@ -17,9 +17,23 @@ const swiper = new Swiper('.swiper', {
       coverflowEffect: {
         rotate: 10,
         stretch: 0,
-        depth: 500,
-        modifier: 2,
+        depth: 400,
+        modifier: 1,
         // slideShadows: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+
+        },
+        768: {
+          slidesPerView: 4,
+
+        },
+        1024: {
+          slidesPerView: 5,
+
+        },
       },
     
   
