@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/tabletmedia.css">
+    <link rel="shortcut icon" href="./me.jpg" type="image/x-icon">
+    <style>
+      #All_details{
+        width: 100vw;
+        /* background-color:#ececec; */
+        background-color:#fafafa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+      }
+      #All_details .content_box{
+        width:90%;
+        min-height: 80vh;
+        background-color: #fafafa;
+        height:100%;
+        padding: 3% 5%;
+      }
+      .content_box h1{
+        color:#674bcb;
+        font-size: clamp(1.5rem, 2.2vw, 3.5rem);
+      }
+      .content_box h3::before{
+        content: "• ";
+      }
+      .content_box h3{
+        font-size: clamp(1.1rem, 1.5vw, 2rem);
+      }
+      .content_box p{
+        margin: 1vw 0 2vw 0;
+        text-wrap:wrap;
+        font-size: clamp(0.9rem, 1.3vw, 2rem);
+      }
+      #buttons_box button{
+        background-color: #674bcb;
+        padding:5px 40px;
+        border-radius: 10px;
+      }
+
+      /* Swiper Carousel Styles */
+      .swiper {
+        width: 100% !important;
+        height: clamp(300px, 40vw, 500px) !important;
+        margin: 20px 0 !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+      }
+      
+      .swiper-wrapper {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+      
+      .swiper-slide {
+        width: clamp(300px, 40vw, 500px) !important;
+        height: clamp(300px, 40vw, 500px) !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        background: transparent !important;
+        flex-shrink: 0 !important;
+      }
+      
+      .swiper-slide video,
+      .swiper-slide img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        border-radius: clamp(15px, 3vw, 25px) !important;
+        border: none !important;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+      }
+      
+      .swiper-pagination {
+        bottom: 10px !important;
+      }
+      
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: #674bcb !important;
+      }
+
+    
+    #tool_img {
+      width: 100%;
+      margin: 2vw 1vw;
+      justify-content: space-around;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    #tool_img div{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 15px;
+      font-weight: 300;
+      min-width: 120px;
+      flex: 1 1 auto;
+    }
+    #tool_img h2 {
+      margin-top: 10px;
+      text-align: center;
+      font-size: clamp(0.8rem, 1vw, 1.2rem);
+    }
+    #buttons_box{
+      margin-top: 20px;
+      display: flex;
+      gap: 30px;
+      font-size: 20px;
+    }
+    #go_back_button{
+      padding: 10px 30px;
+    }
+    #buttons_box h4{
+      padding:10px 20px ;
+      color: #fafafa;
+      background: #674bcb;
+      border-radius: 10px;
+      border:3px solid #674bcb;
+    }
+
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#">
+        <div class="logo">
+          <div class="logoimg"></div>
+          <a href="../index.html">ABHIJEET MAURYA</a>
+        </div>
+      </a>
+
+      <nav class="navbar">
+        <ul>
+          <li class="pagelink"><a href="../index.html#">home</a></li>
+          <li class="pagelink"><a href="../index.html#Aboutpage">about</a></li>
+          <li class="pagelink"><a href="../index.html#Projectpage">project</a></li>
+          <li class="pagelink"><a href="../index.html#Contectpage">contact</a></li>
+        </ul>
+        <div id="bg4navul"></div>
+        <div class="burgermenu" id="burgermenu" onclick="showmenu()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+    </header>
+    <br>
+    <br>
+
+    <section class="main">
+      <div class="outerbox">
+          <div class="firstslide">
+              <span id="down_arrow_box"><i class="fa-solid fa-arrow-down-long" id="down_arrow"></i></span>
+              <div class="maintext" style="animation: none; border: none;" >
+                  <p>Interactive 3D Laptop</p>
+              </div>
+              <div class="subtext">
+                  <p>Animation for Next-Gen Web Experiences</p>
+              </div>
+              <div class="text">
+                <p>Step into the future of web interfaces with a 3D laptop model that responds to your scroll. Watch it open and close smoothly as you navigate, creating an engaging welcome that transforms a static page into a cinematic experience.</p>
+              </div>
+              <button class="projectbtn" onclick="location.href='#'"><h4>Source Code</h4></button>
+          </div>
+      </div>
+
+    </section> 
+
+    <section id="All_details">
+      <div class="content_box">
+
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <video autoplay loop muted src="../project_videos/3d-Laptop.mp4"></video>
+            </div>
+            <div class="swiper-slide">
+              <img src="../img/3d-laptop/2.png" style="width: 100% !important;height: auto;" alt="3D Laptop Animation">
+            </div>
+            <div class="swiper-slide">
+              <img src="../img/3d-laptop/3.png"style="width: 100% !important;height: auto;" alt="3D Laptop Animation">
+            </div>
+            <div class="swiper-slide">
+              <img src="../img/3d-laptop/4.png"style="width: 100% !important;height: auto;" alt="3D Laptop Animation">
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+
+        <h1>Interactive 3D Laptop Animation for Next-Gen Web Experiences</h1>
+        <p>Step into the future of web interfaces with a 3D laptop model that responds to your scroll. Watch it open and close smoothly as you navigate, creating an engaging welcome that transforms a static page into a cinematic experience.</p>
+        
+        <h3>Overview</h3>
+        <p>Our project reimagines the traditional banner by integrating real-time 3D animation with web interactivity. The result is an engaging scroll-triggered experience where a 3D laptop model dynamically opens as the user scrolls down and closes as they scroll up. This innovative feature bridges visual storytelling with interactive design, offering users a seamless introduction to the website's digital environment.</p>
+        
+        <h3>Purpose</h3>
+        <p>At the heart of this project lies a creative ambition — to blur the line between user interface and interactive art. By leveraging modern 3D graphics and scroll-based triggers, the opening laptop acts as both a visual cue and a functional transition element. It serves as a dynamic gateway into the site, instantly capturing attention and immersing users into the digital journey.</p>
+        
+        <h3>Features</h3>
+        <p>The banner section features a photorealistic 3D laptop model that animates based on the user's scroll behavior. As users scroll down, the laptop lid smoothly opens, symbolizing access and entry. Scrolling up triggers the reverse action, reinforcing navigation awareness. Enhanced with natural motion easing, precise control, and real-time rendering, the animation adds depth and life to an otherwise static landing area.</p>
+        
+        <h3>Technology Stack</h3>
+        <p>This project is powered by modern web technologies optimized for 3D rendering and interactive animations. HTML provides the structural foundation, while CSS handles responsive design and visual styling. JavaScript manages the scroll-triggered interactions and animation logic. Three.js serves as the core 3D graphics library, enabling realistic laptop modeling and smooth animations. GSAP (GreenSock Animation Platform) is used for precise timeline control and easing functions, ensuring fluid motion that responds naturally to user scroll behavior.</p>
+        
+        <h3>Future Enhancements</h3>
+        <p>Moving forward, the scope for enhancement includes interactive screen content inside the laptop, touch/cursor-sensitive controls, dynamic lighting effects, or even integration with WebXR for AR/VR interaction. Real-time shadow casting, parallax environment movements, and gesture-based actions could further elevate the immersive experience, setting a new standard for animated web banners.</p>
+        
+        <h3>Conclusion</h3>
+        <p>By combining 3D modeling, real-time animation, and scroll interaction, our banner transcends traditional web design. It not only invites users to engage visually but also emotionally — building curiosity from the very first scroll. This fusion of technology and creativity highlights the potential of immersive web experiences, redefining how users interact with a digital interface.</p>
+        <h1>Tools Used</h1>
+          <div id="tool_img">
+            <div>
+              <svg width="80px" height="80px" viewBox="-11.5 -10.23174 23 20.46348" xmlns="http://www.w3.org/2000/svg"><circle cx="0" cy="0" r="2.05" fill="#61dafb"/><g stroke="#61dafb" stroke-width="1" fill="none"><ellipse rx="11" ry="4.2"/><ellipse rx="11" ry="4.2" transform="rotate(60)"/><ellipse rx="11" ry="4.2" transform="rotate(120)"/></g></svg>
+              <h2>React</h2>
+            </div>
+            <div>
+              <svg width="80px" height="80px" viewBox="-3.52 -3.52 39.04 39.04" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000" stroke-width="0.00032"><g id="SVGRepo_bgCarrier" stroke-width="0" transform="translate(0,0), scale(1)"><path transform="translate(-3.52, -3.52), scale(1.22)" d="M16,29.105669163167477C18.147823494006705,28.535337582651472,19.63664366264627,26.69070500086713,21.70890773449312,25.888118251865023C24.28231694958575,24.891438261195432,28.386397517307678,26.32918347913091,29.585935715837618,23.8438436427318C30.829386768366877,21.267520154867288,26.811191464709168,18.84162401559029,26.481363951940747,16C26.207691582251964,13.642179781838989,28.570357708739657,11.412275546929267,27.879423340960642,9.141411736278851C27.178249009044254,6.836892682719229,24.782838104424282,5.567382243173095,22.864046899053985,4.111122025302908C20.720005539917388,2.4839089507170264,18.68152258738728,0.35831236334390615,16.000000000000004,0.12556281313300133C13.275378357280164,-0.11092762883483004,10.776678860617174,1.483228618072726,8.41170916870675,2.8566947375910097C6.051337906561081,4.227490299635987,3.131655252997338,5.488677984869833,2.2927418134124764,8.086110796121982C1.4451149347296093,10.710522043460703,3.1373553973259414,13.44140055930795,4.166711809223189,15.999999999999998C4.917178714710677,17.865383245730296,6.880284614314829,19.005218798486222,7.460185185071353,20.9304643822286C8.29860691013193,23.713989360279133,6.123745989628709,27.458695595593127,8.223683369510308,29.468975499750947C10.130646366252103,31.294520121723796,13.448512702541665,29.783189353763447,16,29.105669163167477" fill="#283f44" strokewidth="0"></path></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#000" stroke-width="0.32"></g><g id="SVGRepo_iconCarrier"> <path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#E44D26"></path> <path d="M26 5H16V29.5L24 27L26 5Z" fill="#F16529"></path> <path d="M9.5 17.5L8.5 8H24L23.5 11H11.5L12 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5H9.5Z" fill="white"></path> </g></svg>
+              <h2>HTML</h2>
+            </div>
+            <div>
+              <svg height="80px" width="80px" viewBox="-3.2 -3.2 38.40 38.40" fill="none" xmlns="http://www.w3.org/2000/svg" transform="matrix(1, 0, 0, 1, 0, 0)rotate(0)"><g id="SVGRepo_bgCarrier" stroke-width="0" transform="translate(0,0), scale(1)"><path transform="translate(-3.2, -3.2), scale(1.2)" d="M16,27.893458404711314C17.896644008445588,27.60325561824621,19.668299281054587,27.06599642219758,21.4870033760191,26.454611464086913C23.595494310349963,25.745810265952617,25.871314938511148,25.41355748406249,27.587374153591853,23.998186886314798C29.521386242716424,22.40305320877048,31.61297966243216,20.419725349420634,31.83191192219159,17.922342143792655C32.05139317804557,15.418696482243433,29.7920962660095,13.448209025149303,28.71113744004579,11.17930143848196C27.7177836642978,9.094274827010528,27.2858995099188,6.729990650015287,25.69980253194484,5.051186292504054C24.055421339347916,3.310691007614509,21.963447703585583,1.6329176824946805,19.5723606543124,1.5063630852360728C17.191066053089827,1.3803267791536882,15.325078246022589,3.43715843550157,13.137478093162692,4.386292092828093C11.314631053618244,5.177170387075702,9.457529794397134,5.692043972308476,7.716757062059516,6.6501515342438715C5.608560868467226,7.810486067064689,2.7632620398151846,8.408748940443234,1.8125856330752441,10.619423450270848C0.8691033433904021,12.813368975260222,2.393099420165135,15.271307292267709,3.0180910277063493,17.576289133426744C3.5711191787479906,19.615868274042136,4.176842605889797,21.597189328912187,5.278210053216851,23.40071724736708C6.42203945841748,25.273778114778384,7.530604170323759,27.43215651555508,9.554778180004055,28.280344171539298C11.569090223977142,29.12439937767652,13.841119246992292,28.223785660315908,16,27.893458404711314" fill="#283f44" strokewidth="0"></path></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#3280b8" stroke-width="0.8960000000000001"> <path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#3280b8"></path> <path d="M26 5H16V29.5L24 27L26 5Z" fill="#00b3ff"></path> <path d="M19.5 17.5H9.5L9 14L17 11.5H9L8.5 8.5H24L23.5 12L17 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5Z" fill="white"></path> </g><g id="SVGRepo_iconCarrier"> <path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#3280b8"></path> <path d="M26 5H16V29.5L24 27L26 5Z" fill="#00b3ff"></path> <path d="M19.5 17.5H9.5L9 14L17 11.5H9L8.5 8.5H24L23.5 12L17 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5Z" fill="white"></path> </g></svg>
+              <h2>CSS</h2>
+            </div>
+            <div>
+              <svg width="80px" height="80px" viewBox="-79.36 -79.36 414.72 414.72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"><path transform="translate(-79.36, -79.36), scale(12.96)" d="M16,28.55174337886274C18.058014148236474,28.516334209310834,20.105246836888817,29.18049395108233,22.096590920197787,28.659701491939334C24.248537020867275,28.096907090356776,26.998033492272548,27.505681877032313,27.85243209219289,25.451999187059627C28.790569472695964,23.197037042534678,26.553078277520598,20.804747030185755,26.37797880661322,18.368705939968745C26.258998013055837,16.713406237745584,27.33077403356327,15.115758748236491,26.99269029308737,13.490990174610864C26.652978612809864,11.85839802027803,25.261748782881195,10.710863952719732,24.4782257673696,9.238840565585644C23.526284748864025,7.450406257121211,23.318970105249328,5.241640607646815,21.855828875846058,3.8402460446395335C20.281602702443152,2.3324544822007303,18.162285212738542,1.394353959099763,16.000000000000004,1.118408131878823C13.750371026397879,0.8313156963371601,10.979817564105389,0.6430505559358108,9.377270939892714,2.2477614029858177C7.625810656056442,4.001587016034784,9.15620319523132,7.377439813565756,7.727043406166944,9.40253726903892C6.4213784620923935,11.252644427229317,2.4601092965868765,10.587027635610019,1.937181707986932,12.79025349331358C1.4166940248538387,14.983199413733065,4.55502710457899,16.37605072960255,5.597635043447129,18.374271919557966C6.361281092565043,19.83784577132598,6.638211080554252,21.44384495456327,7.2519531778390505,22.976334545370634C8.057995097181616,24.988989138581093,7.973229426283308,27.70600640903479,9.801535524090308,28.871244110120003C11.568368475150894,29.99730301708579,13.905147202958165,28.587786375914188,16,28.55174337886274" fill="#283f44" strokewidth="0"></path></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M0,0 L256,0 L256,256 L0,256 L0,0 Z" fill="#F7DF1E"> </path> <path d="M67.311746,213.932292 L86.902654,202.076241 C90.6821079,208.777346 94.1202286,214.447137 102.367086,214.447137 C110.272203,214.447137 115.256076,211.354819 115.256076,199.326883 L115.256076,117.528787 L139.313575,117.528787 L139.313575,199.666997 C139.313575,224.58433 124.707759,235.925943 103.3984,235.925943 C84.1532952,235.925943 72.9819429,225.958603 67.3113397,213.93026" fill="#000000"> </path> <path d="M152.380952,211.354413 L171.969422,200.0128 C177.125994,208.433981 183.827911,214.619835 195.684368,214.619835 C205.652521,214.619835 212.009041,209.635962 212.009041,202.762159 C212.009041,194.513676 205.479416,191.592025 194.481168,186.78207 L188.468419,184.202565 C171.111213,176.81473 159.597308,167.53534 159.597308,147.944838 C159.597308,129.901308 173.344508,116.153295 194.825752,116.153295 C210.119924,116.153295 221.117765,121.48094 229.021663,135.400432 L210.29059,147.428775 C206.166146,140.040127 201.699556,137.119289 194.826159,137.119289 C187.78047,137.119289 183.312254,141.587098 183.312254,147.428775 C183.312254,154.646349 187.78047,157.568406 198.089956,162.036622 L204.103924,164.614095 C224.553448,173.378641 236.067352,182.313448 236.067352,202.418387 C236.067352,224.071924 219.055137,235.927975 196.200432,235.927975 C173.860978,235.927975 159.425829,225.274311 152.381359,211.354413" fill="#000000"> </path> </g> </g></svg>
+              <h2>JavaScript</h2>
+            </div>
+          </div>
+          
+        <h1>See Live</h1>
+        <div id="buttons_box">
+          <a href="https://abhijeet-maurya.github.io/ThreeJs/" target="_blank"><h4>Live Link</h4></a>
+          <a href="" ><h4 id="go_back_button" style="background-color: transparent;color: #674bcb;">Go Back</h4></a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div id="main_container">
+          <div id="foo_right">
+              <div id="for_main_text">ABHIJEET MAURYA</div>
+              <div id="for_container">A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product</div>
+          </div>
+          <div id="foo_left">
+              <div id="fol_main_text">SOCIAL</div>
+              <div id="fol_container">
+                  <a href="https://www.linkedin.com/in/abhijeet-maurya-developer/" target="_blank" class="icon1"><i class="fa-brands fa-linkedin"></i></a>
+                  <a href="#" class="icon2"><i class="fa-brands fa-x-twitter"></i></a>
+                  <a href="https://github.com/abhijeet-maurya" target="_blank" class="icon3"><i class="fa-brands fa-github"></i></a>
+                  <a href="#" class="icon4"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+          </div>
+      </div>
+      <div id="ending">© Copyright 2024 . Made by <a href="">ABHIJEET MAURYA</a></div>
+  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../javascript/script.js"></script>
+    <script src="//code.tidio.co/jgphhnpgupayzkrgvy5ta4tat7fkjd2x.js" async></script>
+    <script src="../javascript/project_script.js"></script>
+  </body>
+</html>

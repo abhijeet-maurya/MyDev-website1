@@ -8,6 +8,9 @@
         src: url('./source-sans-pro/SourceSansPro-BoldIt.otf');
     };
 }
+html {
+    scroll-behavior: smooth;
+}
 body{
     background-color: #ffffff;
     font-family:monospace,serif;
